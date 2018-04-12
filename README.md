@@ -15,15 +15,7 @@ It Match The Bug Number, Todo List Number, Or Any Function Number To Solve On Th
 
 ## How Can I Do This?
 
-First, Create Your Git Project.
-
-Enter The `.git/hooks` Folder, If You Get The Project With `git init` Command, This Folder Exists.
-
-If The Folder Doesn't Exist, Create By Yourself.
-
-Create A File Called `commit-msg`, And Paste The Following Ruby Code.
-
-Success!!
+This Is The Check Code:
 
 ```ruby
 #!/usr/bin/env ruby
@@ -58,7 +50,48 @@ end
 
 ```
 
+### Using Directly With Git Hook
+
+First, Create Your Git Project.
+
+Enter The `.git/hooks` Folder, If You Get The Project With `git init` Command, This Folder Exists.
+
+If The Folder Doesn't Exist, Create By Yourself.
+
+Create A File Called `commit-msg`, And Paste The Following Ruby Code.
+
+Success!!
+
+
+### Using With `husky` Module
+
+**Dependency**: `npm` / `yarn`, `husky`.
+
+Enter The Source Home Folder, 
+Create Folder `scripts/` And Put File `commit-msg.rb` With Contents Above Typed In It.
+
+Init `package.json` With `npm init` OR `yarn init` If It Doesn't Exist.
+
+Put The Following Content Into The Proper Position, Keep The JSON Style.
+
+```js
+  "scripts": {
+    "commitmsg": "ruby scripts/commit-msg.rb ${GIT_PARAMS}"
+  },
+```
+
+After These Steps, When Doing `git commit` It Will Automatically Check The Comments.
+
+Success!!
+
+
 ## Say Something More...
 
 Related Document, See: https://git-scm.com/book/en/v2/Customizing-Git-Git-Hooks
+
+Husky.js Document, See: https://github.com/typicode/husky
+
+
+
+
 
