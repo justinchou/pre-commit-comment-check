@@ -3,6 +3,10 @@
 Encoding.default_external = Encoding::UTF_8
 Encoding.default_internal = Encoding::UTF_8
 
+puts ARGV[0]
+puts ARGV[1]
+puts ARGV[2]
+
 message_file = ARGV[0]
 message = File.read(message_file)
 

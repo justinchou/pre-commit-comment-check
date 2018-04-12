@@ -1,0 +1,15 @@
+{
+  "name": "pre-commit-comment-check",
+  "version": "1.0.1",
+  "description": "git comment check before commit",
+  "main": "index.js",
+  "repository": "git@github.com:justinchou/pre-commit-comment-check.git",
+  "author": "JustinChowBeliefChain <zhouzhiyu@beliefchain.com>",
+  "license": "MIT",
+  "scripts": {
+    "commitmsg": "ruby scripts/commit-msg.rb ${GIT_PARAMS}"
+  },
+  "devDependencies": {
+    "husky": "^0.14.3"
+  }
+}
